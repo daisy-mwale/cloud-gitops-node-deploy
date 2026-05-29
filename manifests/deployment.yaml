@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-gitops-node-app
+  labels:
+    app: cloud-gitops-node-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloud-gitops-node-app
+  template:
+    metadata:
+      labels:
+        app: cloud-gitops-node-app
+    spec:
+      containers:
+        - name: cloud-gitops-node-app
+          image: daisydanai/cloud-gitops-node-app:latest
+          ports:
+            - containerPort: 3000
