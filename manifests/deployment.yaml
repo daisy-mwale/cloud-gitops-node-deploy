@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: cloud-gitops-node-app
-          image: daisydanai/cloud-gitops-node-app:latest
+          image: daisydanai/gitops-app:v1
+
           ports:
             - containerPort: 3000
